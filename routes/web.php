@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,9 @@ Route::get('/', function () {
     return view('principal');
 });
 
+// Cuando se visita la pagina '/crear-cuenta', se llama al controlador 'RegisterController'.
+// La nomenclatura es poner el nombre del controlador seguida de '::class' para especificar
+// que se quiere hacer uso de esa clase y después entre comillas sencillas se le pasa el
+// método que se quiere cargar. En este caso el método 'index' pq por convención es el que
+// muestra una vista
+Route::get('/crear-cuenta', [RegisterController::class, 'index']);
