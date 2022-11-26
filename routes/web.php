@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Cuando se visita la pagina principal '/', se imprime la vista llamada 'principal'
 Route::get('/', function () {
-    return view('welcome');
+    return view('principal');
+});
+
+// Cuando se visita la pagina '/nosotros', se imprime la vista llamada 'nosotros'
+Route::get('/nosotros', function () {
+    return view('nosotros');
+});
+
+// Cuando se visita la pagina '/tienda', se imprime la vista llamada 'tienda'
+Route::get('/tienda', function () {
+    return view('tienda');
 });
