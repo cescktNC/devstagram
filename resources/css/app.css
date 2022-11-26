@@ -1,0 +1,4 @@
+/* Se agregan las directivas de Tailwind. Son paquetes o utilidades que tiene tailwind css.  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
