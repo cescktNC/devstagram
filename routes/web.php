@@ -24,4 +24,5 @@ Route::get('/', function () {
 // que se quiere hacer uso de esa clase y después entre comillas sencillas se le pasa el
 // método que se quiere cargar. En este caso el método 'index' pq por convención es el que
 // muestra una vista
-Route::get('/crear-cuenta', [RegisterController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register', [RegisterController::class, 'store']); // Se puede poner el name tb pero al tener la misma URL ya adopta el mismo name q se ha asignado en la línea anteerior
